@@ -1,0 +1,184 @@
+/* Universal */
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* NavBar */
+.navbar {
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgba(51, 66, 87, 0.8)
+}
+
+.navbar .container .collapse ul li{
+    margin: 0 10px;
+}
+
+.navbar .container a span{
+    font-size: 50px;
+}
+
+.navbar .container .login{
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 5px 20px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    transition: 0.2s;
+}
+
+.navbar .container .login:hover{
+    background: white;
+    border: 2px solid white;
+    color: #334257;
+    transition: 0.2s;
+}
+
+/* Home */
+.home{
+    min-height: 180vh;
+    background-image: linear-gradient(#334257, #FFFFFF);
+    /* #B8C7DB */
+}
+
+.home .container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home .container h1{
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.home .container h2{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.home .container h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+/* Video Recap */
+.home .videoRecap{
+    min-height: 80vh;
+    padding: 0 150px;
+}
+
+.home .videoRecap .recapContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.home .videoRecap .recapContainer .text{
+    width: 35%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.home .videoRecap .recapContainer .text h1{
+    font-weight: bolder;
+    font-size: 72px;
+    color: #334257;
+}
+
+.home .videoRecap .recapContainer .text p{
+    font-weight: 600;
+    font-size: 24px;
+    color: #889AB4;
+}
+
+.home .videoRecap .recapContainer .text p span{
+    color: #334257;
+}
+
+
+.home .videoRecap .vid{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .videoRecap .vid video{
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* Champoin Prizes */
+.prize{
+    min-height: 100vh;
+}
+
+.prize .container h1{
+    font-size: 72px;
+    font-weight: bolder;
+    color: #334257;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.prize .container .cardGroup{
+    display: flex;
+    justify-content: space-around;
+}
+
+.prize .container .cardGroup .card{
+    background-image: linear-gradient(to bottom right, #334257, #6B7D96);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 50px;
+    color: white;
+    border-radius: 50px;
+    height: 550px;
+    margin: 20px;
+    width: 30%;
+
+}
+
+.prize .container .cardGroup h1{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.prize .container .cardGroup .card .fa-trophy{
+    font-size: 150px;
+    margin-bottom: 20px;
+}
+
+.prize .container .cardGroup .card .rewards{
+    font-size: 24px;
+}
+
+.prize .container .cardGroup .card .rewards i{
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.rank{
+    position: absolute;
+    top: 75px;
+    font-size: 50px;
+    color: #334257;
+}
