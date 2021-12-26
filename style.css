@@ -29,7 +29,7 @@ body{
     font-size: 25px;
     font-weight: 600;
     background-color: rgba(51, 66, 87, 0.8);
-    animation: appear 1s;
+    animation: fadeInDown 1s;
 }
 
 .navbar .container .collapse ul li{
@@ -65,8 +65,7 @@ body{
 /* Home */
 .home{
     min-height: 150vh;
-    background-image: linear-gradient(#334257, #FFFFFF);
-    /* #B8C7DB */
+    background-image: linear-gradient(#334257, #889AB4, #FFFFFF);
 }
 
 .home .container{
@@ -76,24 +75,37 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation: appear 1s;
+    
+}
+
+.home img{
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 90%;
 }
 
 .home .container h1{
     font-weight: bold;
     font-size: 120px;
     letter-spacing: 20px;
+    z-index: 1;
+    animation: fadeIn 1s;
 }
 
 .home .container h2{
     font-size: 100px;
     font-weight: bold;
     letter-spacing: 10px;
+    z-index: 1;
+    animation: fadeIn 1s;
 }
 
 .home .container h3{
     font-size: 30px;
     font-weight: 600;
+    z-index: 1;
+    animation: fadeIn 1s;
 }
 
 /* Video Recap */
@@ -243,9 +255,131 @@ body{
     font-weight: 500;
 }
 
+.aboutUs .joinUs .container input[type=radio] {
+    display: none;
+}
+
+.aboutUs .joinUs .container{
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutUs .joinUs .container .cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.aboutUs .joinUs .container .cards .card{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease;
+    cursor: pointer;
+    background-color: #7483B9;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+.aboutUs .joinUs .container .cards .card .cardImage{
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.aboutUs .joinUs .container .cards .card #cardImage1{
+    background-image: url(assets/network.png);
+}
+
+.aboutUs .joinUs .container .cards .card #cardImage2{
+    background-image: url(assets/mentor.png);
+}
+
+.aboutUs .joinUs .container .cards .card #cardImage3{
+    background-image: url(assets/cv.png);
+    
+}
+
+.aboutUs .joinUs .container .cards .card .cardText{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs .joinUs .container .cards .card h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #37467C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutUs .joinUs .container .cards .card p{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+#item-1:checked ~ .cards #benefit-3, #item-2:checked ~ .cards #benefit-1, #item-3:checked ~ .cards #benefit-2 {
+    transform: translatex(-60%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+  
+#item-1:checked ~ .cards #benefit-2, #item-2:checked ~ .cards #benefit-3, #item-3:checked ~ .cards #benefit-1 {
+    transform: translatex(60%) scale(.8);
+    opacity: .4;
+    z-index: 0;
+}
+  
+#item-1:checked ~ .cards #benefit-1, #item-2:checked ~ .cards #benefit-2, #item-3:checked ~ .cards #benefit-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+    
+    img {
+      box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+    }
+}
+  
+#item-2:checked ~ .player #test {
+    transform: translateY(0);
+}
+  
+#item-2:checked ~ .player #test  {
+    transform: translateY(-40px);
+}
+  
+#item-3:checked ~ .player #test  {
+    transform: translateY(-80px);
+}
+
 /* Champoin Prizes */
 .prize{
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #FFFFFF, #588BA5);
 }
 
 .prize .container h1{
@@ -301,4 +435,16 @@ body{
     top: 75px;
     font-size: 50px;
     color: #334257;
+}
+
+/* timeline */
+.timeline{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #588BA5, #588BA5);
+}
+
+/* mentor adn jury */
+.mentorJury{
+    min-height: 150vh;
+    background-image: linear-gradient(to bottom, #588BA5, #FFFFFF);
 }
