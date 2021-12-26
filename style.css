@@ -1,4 +1,18 @@
+/* Animations */
+@keyframes appear {
+    0%{
+        top: -50px;
+        opacity: 0%;
+    }
+    100%{
+        top: 0px;
+        opacity: 100%;
+    }
+}
+
 /* Universal */
+
+
 *{ 
     margin: 0;
     padding: 0;
@@ -14,7 +28,8 @@ body{
 .navbar {
     font-size: 25px;
     font-weight: 600;
-    background-color: rgba(51, 66, 87, 0.8)
+    background-color: rgba(51, 66, 87, 0.8);
+    animation: appear 1s;
 }
 
 .navbar .container .collapse ul li{
@@ -42,9 +57,14 @@ body{
     transition: 0.2s;
 }
 
+.navbar .container .login:active{
+    transform: translateY(5px);
+    transition: 0.2s ease-in-out;
+}
+
 /* Home */
 .home{
-    min-height: 180vh;
+    min-height: 150vh;
     background-image: linear-gradient(#334257, #FFFFFF);
     /* #B8C7DB */
 }
@@ -56,16 +76,19 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: appear 1s;
 }
 
 .home .container h1{
     font-weight: bold;
     font-size: 120px;
+    letter-spacing: 20px;
 }
 
 .home .container h2{
     font-size: 100px;
     font-weight: bold;
+    letter-spacing: 10px;
 }
 
 .home .container h3{
@@ -73,10 +96,9 @@ body{
     font-weight: 600;
 }
 
-
 /* Video Recap */
 .home .videoRecap{
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 0 150px;
 }
 
@@ -121,6 +143,104 @@ body{
 .home .videoRecap .vid video{
     width: 100%;
     border-radius: 50px;
+}
+
+/* About */
+.aboutUs{
+    min-height: 200vh;
+}
+
+.aboutUs .aboutHack{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs .aboutHack h1{
+    text-align: center;
+    color: #43538C;
+    font-size: 72px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.aboutUs .aboutHack .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 40px; */
+}
+
+.aboutUs .aboutHack .container .left{
+    width: 50%;
+}
+
+.aboutUs .aboutHack .container .left p{
+    color: #7483B9;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.aboutUs .aboutHack .container .left p span{
+    color: #364680;
+}
+
+.aboutUs .aboutHack .container .left .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutUs .aboutHack .container .left .buttons button{
+    font-size: 25px;
+    border-radius: 50px;
+    padding: 15px 50px;
+    background-image: linear-gradient(to right, #7382B8, #C1C9E7, #7382B8);
+    color: white;
+    border: none;
+    background-size: 300% 100%;
+    transition:0.3s ease-in-out;
+}
+
+.aboutUs .aboutHack .container .left .buttons button:hover{
+    background-position: 100% 0;
+    box-shadow: 0 4px 15px 0 rgba(67, 83, 140, 1);
+    transition: 0.3s ease-in-out;
+}
+
+.aboutUs .aboutHack .container .left .buttons button:active{
+    transform: translateY(5px);
+    transition: 0.2s ease-in-out;
+}
+
+.aboutUs .aboutHack .container .right{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url("assets/laptop.png");
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+/* Join us */
+.aboutUs .joinUs{
+    height: 100vh;
+}
+
+.aboutUs .joinUs h1{
+    color: #7483B9;
+    font-size: 72px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.aboutUs .joinUs h2{
+    color: #364680;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
 }
 
 /* Champoin Prizes */
