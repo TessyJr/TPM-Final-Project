@@ -37,13 +37,13 @@
                 <a class="nav-link" href="#prize">CHAMPION PRIZES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">MENTOR & JURY</a>
+                <a class="nav-link" href="#timelineSection">TIMELINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mentorAndJury">MENTOR & JURY</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">TIMELINE</a>
               </li>
             </ul>
           </div>
@@ -55,6 +55,9 @@
     
     <!-- Home -->
     <section class="home" id="home">
+        <img src="assets/Sphere.png" alt="" class="sphere" id="sphere1">
+        <img src="assets/Sphere.png" alt="" class="sphere" id="sphere2">
+        <img src="assets/Sphere.png" alt="" class="sphere" id="sphere3">
         <img src="assets/Vector 1.png" alt="">  
         <div class="container">
             
@@ -88,7 +91,7 @@
                     <p><span>Hackathon 5.0</span> is a 48-hour online coding competition where each team competes to create innovative applications or websites that could solve problems. This year is the 5th time Binus Computer Club (BNCC) held a Hackathon event. Throughout the years, Hackathon has produced many innovative ideas and become the main event of TechnoScape.</p>
                     <div class="buttons">
                         <button>Register</button>
-                       <a href="assets/HackathonGuidebook.pdf" download><button>Download Guidebook</button></a> 
+                       <a href="https://drive.google.com/file/d/15e9f_CZXtfw1x2ntNwXqm8qsympX6nis/view?usp=sharing" target="_blank" download><button>Download Guidebook</button></a> 
                     </div>
                 </div>
                 <div class="right">
@@ -129,7 +132,7 @@
                       </div>
                       <div class="cardText">
                         <h1>Add Value to Your CV</h1>
-                        <p>Hackathon 4.0 will increase your CV because there are lots of experiences that you can gain in this competitive place.</p>
+                        <p>Hackathon 5.0 will increase your CV because there are lots of experiences that you can gain in this competitive place.</p>
                       </div>
                   </label>
               </div>
@@ -144,7 +147,7 @@
             <h1>Champion Prizes</h1>
             <div class="cardGroup">
                 <div class="card">
-                    <i class="fas fa-trophy"></i>
+                    <i class="fas fa-trophy" id="firstPlace"></i>
                     <h1>First Rank</h1>
                     <span class="rank">1</span>
                     <div class="rewards">
@@ -155,7 +158,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <i class="fas fa-trophy"></i>
+                    <i class="fas fa-trophy" id="secondPlace"></i>
                     <h1>Second Rank</h1>
                     <span class="rank">2</span>
                     <div class="rewards">
@@ -165,7 +168,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <i class="fas fa-trophy"></i>
+                    <i class="fas fa-trophy" id="thirdPlace"></i>
                     <h1>Third Rank</h1>
                     <span class="rank">3</span>
                     <div class="rewards">
@@ -179,15 +182,54 @@
     </section>
 
     <!-- Timeline -->
-    <section class="timeline">
-
+    <section class="timeline" id="timelineSection">
+        <div class="timeContainer">
+            <h1>Our Timeline</h1>
+            <div class="graphics">
+                <div class="graphic" id="graphic1">
+                    <img src="assets/platform1.png" alt="platform" class="timelineImg">
+                    <div class="text">
+                        <h1>Open Registration</h1>
+                        <p>May, 31 2022</p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic2">
+                    <img src="assets/platform2.png" alt="platform" class="timelineImg">
+                    <div class="text">
+                        <h1>Close Registration</h1>
+                        <p>June 25, 2022</p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic3">
+                    <img src="assets/platform3.png" alt="platform" class="timelineImg">
+                    <div class="text">
+                        <h1>Technical Meeting</h1>
+                        <p>June 29, 2022
+                            <br>
+                            09.20 - 11.00
+                        </p>
+                    </div>
+                </div>
+                <div class="graphic" id="graphic4">
+                    <img src="assets/platform4.png" alt="platform" class="timelineImg">
+                    <div class="text">
+                        <h1>Competition Days</h1>
+                        <p>July 3 - 5, 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <!-- mentor and jury -->
-    <section class="mentorJury">
-        <div class="mentor"></div>
-        <div class="jury"></div>
+    <section class="mentorJury" id="mentorAndJury">
+        <div class="mentor">
+            <h1>Our Mentors</h1>
+        </div>
+        <div class="jury">
+            <h1>Our Jury</h1>
+        </div>
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

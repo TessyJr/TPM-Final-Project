@@ -10,6 +10,29 @@
     }
 }
 
+@keyframes floatUp {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes floatDown {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
 /* Universal */
 
 
@@ -66,6 +89,36 @@ body{
 .home{
     min-height: 150vh;
     background-image: linear-gradient(#334257, #889AB4, #FFFFFF);
+}
+
+.home .sphere{
+    position: absolute;
+    z-index: 3;
+    
+}
+
+.home #sphere1{    
+    height: 200px;
+    width: 200px;
+    top: 200px;
+    left: 200px;
+    animation: floatUp 6s ease-in-out infinite;
+}
+
+.home #sphere2{    
+    height: 150px;
+    width: 150px;
+    top: 500px;
+    left: 500px;
+    animation: floatDown 6s ease-in-out infinite;
+}
+
+.home #sphere3{    
+    height: 250px;
+    width: 250px;
+    top: 300px;
+    left: 1500px;
+    animation: floatUp 6s ease-in-out infinite;
 }
 
 .home .container{
@@ -407,7 +460,13 @@ body{
     height: 550px;
     margin: 20px;
     width: 30%;
+    transition: 0.5s;
+}
 
+.prize .container .cardGroup .card:hover{
+    box-shadow: 0 15px 20px 5px rgba(67, 83, 140, 1);
+    transform: translateY(-20px);
+    transition: 0.5s;
 }
 
 .prize .container .cardGroup h1{
@@ -419,6 +478,18 @@ body{
 .prize .container .cardGroup .card .fa-trophy{
     font-size: 150px;
     margin-bottom: 20px;
+}
+
+.prize .container .cardGroup .card #firstPlace{
+    color: #FFD700;
+}
+
+.prize .container .cardGroup .card #secondPlace{
+    color: #C0C0C0;
+}
+
+.prize .container .cardGroup .card #thirdPlace{
+    color: #CD7F32;
 }
 
 .prize .container .cardGroup .card .rewards{
@@ -440,11 +511,167 @@ body{
 /* timeline */
 .timeline{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #588BA5, #588BA5);
+    background-image: linear-gradient(to bottom, #588BA5, #a3e0ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline .timeContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.timeline .timeContainer h1{
+    font-size: 72px;
+    font-weight: bolder;
+    color: #334257;
+    margin-bottom: 50px;
+}
+
+.timeline .timeContainer .graphics{
+    display: flex;
+    justify-content: space-;
+    width: 65vw;
+    background-image: url("assets/path.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline .timeContainer .graphics .graphic{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+}
+
+.timelineImg{
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+}
+
+.timelineImg:hover{
+    transform: scale(1.2) translateY(-20px);
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(0 15px 10px #00000049);
+    
+}
+
+#graphic1{
+    padding-top: 40px;
+}
+
+#graphic1 .text{
+    text-align: center;
+}
+
+#graphic1 .text h1{
+    font-size: 24px;
+    color: #889AB4;
+    margin: 0;
+    margin-top: 40px;
+}
+
+#graphic1 .text p{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+#graphic2{
+    justify-content: flex-end;
+    height: 500px;
+}
+
+#graphic2 .text{
+    text-align: center;
+}
+
+#graphic2 .text h1{
+    font-size: 24px;
+    color: #7483B9;
+    margin: 0;
+    margin-top: 40px;
+}
+
+#graphic2 .text p{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+#graphic3{
+    padding-top: 40px;
+}
+
+#graphic3 .text{
+    text-align: center;
+}
+
+#graphic3 .text h1{
+    font-size: 24px;
+    color: #5886A6;
+    margin: 0;
+    margin-top: 40px;
+}
+
+#graphic3 .text p{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+#graphic4{
+    justify-content: flex-end;
+    height: 500px;
+}
+
+#graphic4 .text{
+    text-align: center;
+}
+
+#graphic4 .text h1{
+    font-size: 24px;
+    color: #889AB4;
+    margin: 0;
+    margin-top: 40px;
+}
+
+#graphic4 .text p{
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
 }
 
 /* mentor adn jury */
 .mentorJury{
-    min-height: 150vh;
-    background-image: linear-gradient(to bottom, #588BA5, #FFFFFF);
+    min-height: 200vh;
+    background-image: linear-gradient(to bottom, #a3e0ff, #FFFFFF);
+}
+
+.mentorJury .mentor{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mentorJury .mentor h1{
+    color: #334257;
+    font-weight: bolder;
+}
+
+.mentorJury .jury{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mentorJury .jury h1{
+    color: #334257;
+    font-weight: bolder;
 }
