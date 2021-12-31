@@ -650,7 +650,7 @@ body{
 
 /* mentor and jury */
 .mentorJury{
-    min-height: 200vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom, #a3e0ff, #FFFFFF);
 }
 
@@ -658,7 +658,7 @@ body{
 .mentorJury .mentor{
     height: 100vh;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 .mentorJury .mentor h1{
@@ -839,7 +839,7 @@ div#carousel {
 
 /* Jury */
 .mentorJury .jury{
-    height: 100vh;
+    height: 80vh;
     text-align: center;
 }
 
@@ -955,24 +955,24 @@ div#carousel {
      flex-direction: column;
      align-items: center;
      align-items: center;
+     padding-top: 150px;
  }
 
  .faq h1{
      font-size: 64px;
      font-weight: bolder;
      color: #7483B9;
-     margin-bottom: 50px;
  }
 
 .faq .faqContainer{
     height: fit-content;
     display: flex;
-    padding: 0 100px;
+    padding: 0 150px;
     width: 100vw;
 }
 
  .faq .faqContainer .faqImg{
-     width: 50%;
+     width: 40%;
      background: url("assets/faq.png");
      height: 500px;
      background-size: contain;
@@ -981,17 +981,123 @@ div#carousel {
  }
 
 .faq .faqContainer .accordion{
-    width: 40%;
-    margin-top: 100px;
+    width: 50%;
+    margin-top: 75px;
     color: #7483b9;
 }
 
 .faq .faqContainer .accordion .accordion-item{
     background-color: #d1e4ff;
+    border-radius: 15px;
+    margin: 10px 0;
+    font-size: 18px;
 }
 
 .faq .faqContainer .accordion .accordion-item h2 button{
     font-weight: bold;
     color: #7483B9;
-    background-color: rgba(116, 131, 185, 0.2)
+    background-color: rgba(116, 131, 185, 0.2);
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+/* footer */
+footer{
+    background-color: #334257;
+}
+
+.socialContainer a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.socialContainer{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.socialContainer .email{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EA4335;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.socialContainer .email:hover{
+    background-color: #EA4335;
+    color: white;
+    transition: 0.5s;
+}
+
+.socialContainer .facebook{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b5998;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.socialContainer .facebook:hover{
+    background-color: #3b5998;
+    color: white;
+    transition: 0.5s;
+}
+
+.socialContainer .twitter{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #08a0e9;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.socialContainer .twitter:hover{
+    background-color: #08a0e9;
+    color: white;
+    transition: 0.5s;
+}
+
+.socialContainer .linkedin{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0077b5;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.socialContainer .linkedin:hover{
+    background-color: #0077b5;
+    color: white;
+    transition: 0.5s;
+}
+
+.socialContainer .instagram{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #DD2A7B;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.socialContainer .instagram:hover{
+    background-color: #DD2A7B;
+    color: white;
+    transition: 0.5s;
 }
