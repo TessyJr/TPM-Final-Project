@@ -4,6 +4,11 @@ var condition1 = false;
 var condition2= false;
 var condition3 = false;
 var condition4 = false;
+var condition5 = false;
+var condition6= false;
+var condition7 = false;
+var condition8 = false;
+var condition9 = false;
 
 function showTab(n) {
     if (n == 1) {
@@ -44,8 +49,8 @@ function validateGroup() {
 
 function validatePass() {
     var inputPass = document.getElementById("password").value;
-    var passRGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if(inputPass.match(passRGEX)){
+    var passREGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if(inputPass.match(passREGEX)){
       document.getElementById("validationPass").style.display = "none";
       document.getElementById("groupInputPass").style.borderColor = "green";
       condition2 = true;
@@ -59,7 +64,10 @@ function validatePass() {
 function confirmPass() {
     var inputPass = document.getElementById("password").value;
     var inputConfirmPass = document.getElementById("confirmPassword").value;
-    if (inputConfirmPass == inputPass) {
+    if (inputConfirmPass == "") {
+      document.getElementById("groupInputConfirm").style.borderColor = "red";
+      condition3 = false;
+    } else if (inputConfirmPass == inputPass) {
       document.getElementById("confirmationPass").style.display = "none";
       document.getElementById("groupInputConfirm").style.borderColor = "green";
       condition3 = true;
@@ -82,12 +90,84 @@ function validateStatus() {
   } 
 }
 
+function validateName() {
+  var inputName = document.getElementById("name").value;
+    if (inputName != "") {
+      document.getElementById("groupInputName").style.borderColor = "green";
+      condition5 = true;
+    } else {
+      document.getElementById("groupInputName").style.borderColor = "red";
+      condition5 = false;
+    }
+}
+
+function validateEmail() {
+  var inputEmail = document.getElementById("email").value;
+  var emailREGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if(inputEmail.match(emailREGEX)){
+    document.getElementById("validationEmail").style.display = "none";
+    document.getElementById("groupInputEmail").style.borderColor = "green";
+    condition6 = true;
+  } else {
+    document.getElementById("validationEmail").style.display = "block";
+    document.getElementById("groupInputEmail").style.borderColor = "red";
+    condition6 = false;
+  }
+}
+
+function validateWhatsapp() {
+  var inputWhatsapp = document.getElementById("whatsapp").value;
+  var whatsappREGEX = /^\d{9,}$/;
+  if(inputWhatsapp.match(whatsappREGEX)){
+    document.getElementById("validationWhatsapp").style.display = "none";
+    document.getElementById("groupInputWhatsapp").style.borderColor = "green";
+    condition7 = true;
+  } else {
+    document.getElementById("validationWhatsapp").style.display = "block";
+    document.getElementById("groupInputWhatsapp").style.borderColor = "red";
+    condition7 = false;
+  }
+}
+
+function validateLine() {
+  var inputLine = document.getElementById("line").value;
+    if (inputLine != "") {
+      document.getElementById("groupInputLine").style.borderColor = "green";
+      condition8 = true;
+    } else {
+      document.getElementById("groupInputLine").style.borderColor = "red";
+      condition8 = false;
+    }
+}
+
+function validateGithub() {
+  var inputGithub = document.getElementById("github").value;
+    if (inputGithub != "") {
+      document.getElementById("groupInputGithub").style.borderColor = "green";
+      condition9 = true;
+    } else {
+      document.getElementById("groupInputGithub").style.borderColor = "red";
+      condition9 = false;
+    }
+}
+
 function validateForm1() {
   validateGroup();
   validatePass();
   confirmPass();
   validateStatus();
   if (condition1 == true && condition2 == true && condition3 == true && condition4 == true) {
+    next(1);
+  }
+}
+
+function validateForm2() {
+  validateName();
+  validateEmail();
+  validateWhatsapp();
+  validateLine();
+  validateGithub();
+  if (condition5 == true && condition6 == true && condition7 == true && condition8 == true && condition9 == true) {
     next(1);
   }
 }

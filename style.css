@@ -431,23 +431,24 @@ body{
 /* Champoin Prizes */
 .prize{
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(to bottom, #FFFFFF, #588BA5);
+}
+
+.prize .container{
+    height: 100vh;
+    padding-top: 100px;
 }
 
 .prize .container h1{
     font-size: 72px;
     font-weight: bolder;
     color: #334257;
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: center;   
 }
 
 .prize .container .cardGroup{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .prize .container .cardGroup .card{
@@ -461,14 +462,47 @@ body{
     border-radius: 50px;
     height: 550px;
     margin: 20px;
-    width: 30%;
+    width: 400px;
     transition: 0.5s;
+    position: absolute;
+    opacity: 0.5;
 }
 
 .prize .container .cardGroup .card:hover{
     box-shadow: 0 15px 20px 5px rgba(67, 83, 140, 1);
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: 0.5s;
+    opacity: 1;
+}
+
+.prize .container .cardGroup #firstPlace{
+    left: 450px;
+    z-index: 3;
+    top: 3525px;
+}
+
+.prize .container .cardGroup #firstPlace:hover{
+    z-index: 4;
+}
+
+.prize .container .cardGroup #secondPlace{
+    z-index: 2;
+    top: 3575px;
+}
+
+.prize .container .cardGroup #secondPlace:hover{
+    z-index: 4;
+}
+
+.prize .container .cardGroup #thirdPlace{
+    right: 450px;
+    z-index: 1;
+    top: 3625px;
+    
+}
+
+.prize .container .cardGroup #thirdPlace:hover{
+    z-index: 4;
 }
 
 .prize .container .cardGroup h1{
@@ -477,37 +511,12 @@ body{
     margin-bottom: 20px;
 }
 
-.prize .container .cardGroup .card .fa-trophy{
-    font-size: 150px;
-    margin-bottom: 20px;
-}
-
-.prize .container .cardGroup .card #firstPlace{
-    color: #FFD700;
-}
-
-.prize .container .cardGroup .card #secondPlace{
-    color: #C0C0C0;
-}
-
-.prize .container .cardGroup .card #thirdPlace{
-    color: #CD7F32;
-}
-
 .prize .container .cardGroup .card .rewards{
     font-size: 24px;
 }
 
-.prize .container .cardGroup .card .rewards i{
-    margin-bottom: 20px;
-    margin-right: 10px;
-}
-
-.rank{
-    position: absolute;
-    top: 75px;
-    font-size: 50px;
-    color: #334257;
+.prize .container .cardGroup .card img{
+    height: 300px;
 }
 
 /* timeline */

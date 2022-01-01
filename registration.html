@@ -47,7 +47,7 @@
                         <label for="confirmPassword">Confirm Password</label>
                         <div class="groupInput" id="groupInputConfirm">
                             <i class="fas fa-key"></i>
-                            <input type="password" id="confirmPassword" placeholder="please confirm your password" oninput="confirmPass(this.value)" required>
+                            <input type="password" id="confirmPassword" placeholder="please confirm your password" oninput="confirmPass()" required>
                         </div>
                         <div class="validation" id="confirmationPass">Your password confirmation does not match with your password</div>
                         <label for="status">Status</label>
@@ -76,34 +76,36 @@
                         </div>
                     </div>
                         <label for="name">Full Name</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputName">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="name" placeholder="please enter your full name" required>
+                            <input type="text" id="name" placeholder="please enter your full name" oninput="validateName()" required>
                         </div>
                         <label for="email">Email</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputEmail">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" placeholder=" please enter your email" required>
+                            <input type="email" id="email" placeholder=" please enter your email" oninput="validateEmail()" required>
                         </div>
+                        <div class="validation" id="validationEmail">Invalid email address</div>
                         <label for="whatsapp">Whatsapp Number</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputWhatsapp">
                             <i class="fab fa-whatsapp"></i>
-                            <input type="text" id="whatsapp" placeholder="please enter your whatsapp number" required>
+                            <input type="text" id="whatsapp" placeholder="please enter your whatsapp number" oninput="validateWhatsapp()" required>
                         </div>
+                        <div class="validation" id="validationWhatsapp">Your whatsapp number must only contain numbers and must be 9 digits long</div>
                         <label for="line">LINE ID</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputLine">
                             <i class="fab fa-line"></i>
-                            <input type="text" id="line" placeholder="please enter your LINE ID" required>
+                            <input type="text" id="line" placeholder="please enter your LINE ID" oninput="validateLine()" required>
                         </div>
                         <label for="github">Github/Gitlab ID</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputGithub">
                             <i class="fab fa-github"></i>
-                            <input type="text" id="github" placeholder="please enter your github/gitlab ID" required>
+                            <input type="text" id="github" placeholder="please enter your github/gitlab ID" oninput="validateGithub()" required>
                         </div>
     
                         <div class="buttons">
                             <button onclick="back(-1)" type="button">Back</button>
-                            <button onclick="next(1)" type="button">Next</button>
+                            <button onclick="validateForm2()" type="button">Next</button>
                         </div>  
                 </div>
     
@@ -122,6 +124,7 @@
                     <div class="groupInput">
                         <i class="fas fa-map-marker-alt"></i>
                         <select id="place" required>
+                                <option value=""></option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
