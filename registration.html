@@ -34,30 +34,32 @@
                         </div>
                     </div>
                         <label for="group">Group Name</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputGroup">
                             <i class="fas fa-users"></i>
-                            <input type="text" id="group" placeholder="please enter your group name" required>
+                            <input type="text" id="group" placeholder="please enter your group name" oninput="validateGroup()" required>
                         </div>
                         <label for="password">Password</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputPass">
                             <i class="fas fa-key"></i>
-                            <input type="password" id="password" placeholder=" please enter your password" required>
+                            <input type="password" id="password" placeholder=" please enter your password" oninput="validatePass(); confirmPass()" required>
                         </div>
+                        <div class="validation" id="validationPass">Your password must be at least 8 characters long, consisting of uppercase letters, lowercase letter, number, and symbol</div>
                         <label for="confirmPassword">Confirm Password</label>
-                        <div class="groupInput">
+                        <div class="groupInput" id="groupInputConfirm">
                             <i class="fas fa-key"></i>
-                            <input type="password" id="confirmPassword" placeholder="please confirm your password" required>
+                            <input type="password" id="confirmPassword" placeholder="please confirm your password" oninput="confirmPass(this.value)" required>
                         </div>
+                        <div class="validation" id="confirmationPass">Your password confirmation does not match with your password</div>
                         <label for="status">Status</label>
-                        <div class="statusForm">
-                            <input type="radio" id="binusian" name="status" required>
+                        <div class="statusForm" id="groupInputStatus">
+                            <input type="radio" id="binusian" name="status" onclick="validateStatus()" required>
                             <label for="binusian">BINUSIAN</label>
-                            <input type="radio" id="nonBinusian" name="status" required>
+                            <input type="radio" id="nonBinusian" name="status" onclick="validateStatus()" required>
                             <label for="binusian">Non-BINUSIAN</label>
                         </div>
         
                         <div class="buttons">
-                            <button onclick="next(1)" type="button">Next</button>
+                            <button onclick="validateForm1()" type="button">Next</button>
                         </div>
     
                 </div>

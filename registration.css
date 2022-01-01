@@ -113,9 +113,15 @@ body{
     outline: none;
 }
 
+.container .right form .groupInput input::after{
+    border: none;
+    background: none; 
+    color: white;
+}
+
 .container .right form .groupInput{
     display: flex;
-    border-bottom: 1px solid white;
+    border-bottom: 3px solid white;
     margin-bottom: 20px;
 }
 
@@ -124,6 +130,11 @@ body{
     margin-left: 10px;
     margin-bottom: 10px;
     font-size: 30px;
+}
+
+.container .right form .statusForm{
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
 }
 
 .container .right form .statusForm input[type=radio] {
@@ -241,4 +252,11 @@ body{
 
 .container .right #form3 .info .nav .nav3{
     background-color: white;
+}
+
+.container form .validation{
+    color: rgb(255, 72, 72);
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: none;
 }
