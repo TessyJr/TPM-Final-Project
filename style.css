@@ -1,25 +1,11 @@
 /* Animations */
 @keyframes appear {
     0%{
-        top: -50px;
         opacity: 0%;
     }
     100%{
-        top: 0px;
         opacity: 100%;
     }
-}
-
-@keyframes floatUp {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
 }
 
 @keyframes floatDown {
@@ -43,6 +29,10 @@
     
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -53,8 +43,9 @@ body{
 .navbar {
     font-size: 25px;
     font-weight: 600;
-    background-color: rgba(51, 66, 87, 0.8);
-    animation: fadeInDown 1s;
+    background-color: rgba(51, 66, 87, 0);
+    animation: appear 1s;
+    transition: background-color 0.3s;
 }
 
 .navbar .container .collapse ul li{
@@ -104,7 +95,7 @@ body{
     width: 200px;
     top: 200px;
     left: 200px;
-    animation: floatUp 6s ease-in-out infinite;
+    animation: floatDown 6s ease-in-out 1s infinite;
 }
 
 .home #sphere2{    
@@ -112,7 +103,7 @@ body{
     width: 150px;
     top: 500px;
     left: 500px;
-    animation: floatDown 6s ease-in-out infinite;
+    animation: floatDown 6s ease-in-out 2s infinite;
 }
 
 .home #sphere3{    
@@ -120,7 +111,7 @@ body{
     width: 250px;
     top: 300px;
     left: 1500px;
-    animation: floatUp 6s ease-in-out infinite;
+    animation: floatDown 6s ease-in-out infinite;
 }
 
 .home .container{
@@ -436,14 +427,18 @@ body{
 
 .prize .container{
     height: 100vh;
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .prize .container h1{
     font-size: 72px;
     font-weight: bolder;
     color: #334257;
-    text-align: center;   
+    text-align: center; 
+    margin-bottom: 25px; 
 }
 
 .prize .container .cardGroup{
@@ -464,7 +459,6 @@ body{
     margin: 20px;
     width: 400px;
     transition: 0.5s;
-    position: absolute;
     opacity: 0.5;
 }
 
@@ -476,9 +470,8 @@ body{
 }
 
 .prize .container .cardGroup #firstPlace{
-    left: 450px;
+    left: 150px;
     z-index: 3;
-    top: 3525px;
 }
 
 .prize .container .cardGroup #firstPlace:hover{
@@ -486,8 +479,8 @@ body{
 }
 
 .prize .container .cardGroup #secondPlace{
+    top: 50px;
     z-index: 2;
-    top: 3575px;
 }
 
 .prize .container .cardGroup #secondPlace:hover{
@@ -495,9 +488,9 @@ body{
 }
 
 .prize .container .cardGroup #thirdPlace{
-    right: 450px;
+    top: 100px;
+    right: 150px;
     z-index: 1;
-    top: 3625px;
     
 }
 

@@ -20,7 +20,7 @@
                 5.0</h1>
         </div>
         <div class="right">
-            <form action="">
+            <form action="" name="inputForm">
 
                 <!-- STEP 1 -->
                 <div id="form1">
@@ -121,9 +121,9 @@
                         </div>
                     </div>
                     <label for="place">Birth Place</label>
-                    <div class="groupInput">
+                    <div class="groupInput" id="groupInputPlace">
                         <i class="fas fa-map-marker-alt"></i>
-                        <select id="place" required>
+                        <select id="place" oninput="validatePlace()" required>
                                 <option value=""></option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -374,24 +374,25 @@
                         </select>
                     </div>
                     <label for="date">Date of Birth</label>
-                    <div class="groupInput">
+                    <div class="groupInput" id="groupInputDate">
                         <i class="fas fa-calendar-alt"></i>
-                        <input type="date" id="date" placeholder="please enter your date of birth" required>
+                        <input type="date" id="date" placeholder="please enter your date of birth" oninput="validateDate()" placeholder="dd-mm-yyyy" max required>
                     </div>
+                    <div class="validation" id="validationDate">You must be at least 17 years old</div>
                     <label for="cv">CV</label>
-                    <div class="groupInput">
+                    <div class="groupInput" id="groupInputCv">
                         <i class="fas fa-file-image"></i>
-                        <input type="file" id="cv" accept=".png, .jpeg, .jpg, .pdf" required>
+                        <input type="file" id="cv" accept=".png, .jpeg, .jpg, .pdf" onchange="validateCv()" required>
                     </div>
                     <label for="id">Flazz / ID Card</label>
-                    <div class="groupInput">
+                    <div class="groupInput" id="groupInputId">
                         <i class="fas fa-id-badge"></i>
-                        <input type="file" id="id" accept=".png, .jpeg, .jpg, .pdf" required>
+                        <input type="file" id="id" accept=".png, .jpeg, .jpg, .pdf" onchange="validateId()" required>
                     </div>
     
                     <div class="buttons">
                         <button onclick="back(-1)" type="button">Back</button>
-                        <button type="submit"><b>Submit</b></button>
+                        <button type="button" onclick="validateAllForm()"><b>Submit</b></button>
                     </div>
                 </div>
             </form>

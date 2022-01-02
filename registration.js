@@ -1,14 +1,18 @@
 var page = 1;
 showTab(page);
 var condition1 = false;
-var condition2= false;
+var condition2 = false;
 var condition3 = false;
 var condition4 = false;
 var condition5 = false;
-var condition6= false;
+var condition6 = false;
 var condition7 = false;
 var condition8 = false;
 var condition9 = false;
+var condition10 = false;
+var condition11 = false;
+var condition12 = false;
+var condition13 = false;
 
 function showTab(n) {
     if (n == 1) {
@@ -151,6 +155,59 @@ function validateGithub() {
     }
 }
 
+function validatePlace(){
+  var inputPlace = document.getElementById("place").value;
+  if (inputPlace != ""){
+    document.getElementById("groupInputPlace").style.borderColor = "green";
+    condition10 = true;
+  } else{
+    document.getElementById("groupInputPlace").style.borderColor = "red";
+    condition10 = false;
+  }
+}
+
+function validateDate(){
+  var inputDate = document.getElementById("date").value;
+  var today = Date.now();
+  var birthDate = Date.parse(inputDate);
+  var age = (today - birthDate)/(1000*60*60*24*365);
+
+  if (inputDate == "") {
+    document.getElementById("groupInputDate").style.borderColor = "red";
+    condition11 = false;
+  } else if(age>17) {
+    document.getElementById("validationDate").style.display = "none";
+    document.getElementById("groupInputDate").style.borderColor = "green";
+    condition11 = true;
+  } else {
+    document.getElementById("validationDate").style.display = "block";
+    document.getElementById("groupInputDate").style.borderColor = "red";
+    condition11 = false;
+  }
+}
+
+function validateCv(){
+  var inputCv = document.getElementById("cv").value;
+  if (inputCv != ""){
+    document.getElementById("groupInputCv").style.borderColor = "green";
+    condition12 = true;
+  } else{
+    document.getElementById("groupInputCv").style.borderColor = "red";
+    condition12 = false;
+  }
+}
+
+function validateId(){
+  var inputId = document.getElementById("id").value;
+  if (inputId != ""){
+    document.getElementById("groupInputId").style.borderColor = "green";
+    condition13 = true;
+  } else{
+    document.getElementById("groupInputId").style.borderColor = "red";
+    condition13 = false;
+  }
+}
+
 function validateForm1() {
   validateGroup();
   validatePass();
@@ -169,5 +226,24 @@ function validateForm2() {
   validateGithub();
   if (condition5 == true && condition6 == true && condition7 == true && condition8 == true && condition9 == true) {
     next(1);
+  }
+}
+
+function validateAllForm() {
+  validateGroup();
+  validatePass();
+  confirmPass();
+  validateStatus();
+  validateName();
+  validateEmail();
+  validateWhatsapp();
+  validateLine();
+  validateGithub();
+  validatePlace();
+  validateDate;
+  validateCv();
+  validateId();
+  if (condition1 == true && condition2 == true && condition3 == true && condition4 == true && condition5 == true && condition6 == true && condition7 == true && condition8 == true && condition9 == true && condition10 == true && condition11 == true && condition12 == true && condition13 == true) {
+    document.inputForm.submit();
   }
 }
