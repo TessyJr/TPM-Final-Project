@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navigationBar">
+    <!-- NavBar not Logged In -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbarNotLoggedIn">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <span>
@@ -49,6 +49,45 @@
           </div>
           <button class="login">
               <span><i class="fas fa-sign-in-alt"></i></span> Login
+            </button>
+        </div>
+    </nav>
+
+    <!-- NavBar Logged In-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbarLoggedIn">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span>
+                    <i class="fab fa-hackerrank"></i>
+                </span>
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#prize">CHAMPION PRIZES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#timelineSection">TIMELINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mentorAndJury">MENTOR & JURY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faqSec">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <button class="login">
+              <span></span> TO DASHBOARD
             </button>
         </div>
     </nav>
@@ -519,31 +558,30 @@
         </div>
     </section>
 
-    
+    <!-- Other Events -->
+    <section class="otherEvents">
+        <h1>Other Events</h1>
+        <div class="virtualConference">
+            <img src="assets/virtualConference.png" alt="Virtual Conference">
+            <h2>Virtual Conference</h2>
+            <p><span>Virtual Conference</span> is a webinar and talk show series to educate the participants about business, design, and technology for 3 days in a virtual space. There will be inspiring speakers who are experts in their fields so that participants can implement this knowledge in the future.</p>
+            <button>Register Virtual Conference</button>
+        </div>
+        <img src="" alt="">
+        <img src="assets/developerWorkshop.png" alt="Developer Workshop">
+        <h2>Developer Workshop</h2>
+        <p><span>Developer Workshop</span> is an online workshop series that discusses intermediate technology with experienced trainers for 4 days. This event will be the place for participants to learn and achieve their dream career as a developer. Participants will gain many insights and experiences regarding developer topics from trainers who are experts in IT fields. Thus, you will be one step closer to reach your remarkable career.</p>
+        <button>Register Developer Workshop</button>
+    </section>
 
     <!-- Footer -->
-    <footer class="w-100 py-4 flex-shrink-0">
-      <div class="container py-4">
-          <div class="row gy-4 gx-5">
-              <div class="col-lg-5 col-md-6">
-                  <h5 class="h1 text-white">FB.</h5>
-                  <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                  
-              </div>
-              <div class="col-lg-2 col-md-6">
-                  <h5 class="text-white mb-3">Quick links</h5>
-                  <ul class="list-unstyled text-muted">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Champion Prizes</a></li>
-                      <li><a href="#">Timeline</a></li>
-                      <li><a href="#">Mentor & Jury</a></li>
-                      <li><a href="#">FAQ</a></li>
-                  </ul>
-              </div>
-              <div class="col-lg-5 col-md-6">
-                  <h5 class="text-white mb-3">Follow Us</h5>
-                  <div class="socialContainer">
+    <footer >
+        <div class="containerTop">
+            <div class="topLeft">
+                <h1>Contact Us  </h1>
+                <img src="assets/contactUs.png" alt="">
+                <h2>Our Social Media</h2>
+                <div class="socialContainer">
                     <a href="mailto:rnd@bncc.net">
                         <div class="email">
                             <span class="far fa-envelope"></span>
@@ -570,14 +608,32 @@
                         </div>  
                     </a>
                 </div>
-                <br>
-                  <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-              </div>
-          </div>
-          <hr>
-          <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Hackathon 5.0</a></p>
-      </div>
+            </div>
+            <div class="topRight">
+                <form action="">
+                    <label for="contactUsName">Name</label>
+                    <input type="text" id="contactUsName" required>
+                    <label for="contactUsEmail">Email</label>
+                    <input type="email" id="contactUsName" required>
+                    <label for="contactUsSubject">Subject</label>
+                    <input type="text" id="contactUsSubject" required>
+                    <label for="contactUsMessage">Message</label>
+                    <textarea name="contactUsMessage" id="contactUsMessage" cols="30" rows="1" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="containerBot">
+            <div class="line"></div>
+            <div class="text">
+                <span>Powered and Organized by Kelompok 5 Final Project TPM</span>
+                <span><a href="">Privacy Policy & Terms of Service</a></span>
+            </div>
+        </div>
+                
+
   </footer>
+
   <script src="landingPage.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7c925acf6e.js" crossorigin="anonymous"></script>

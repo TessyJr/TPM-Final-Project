@@ -4,9 +4,15 @@ let navLinks = document.querySelectorAll('nav a');
 window.onscroll = () =>{
     //changing navbar
     if(window.pageYOffset > 5){
-        document.getElementById("navigationBar").style.backgroundColor = "rgba(51, 66, 87, 0.8)";
+        document.getElementById("navbarNotLoggedIn").style.backgroundColor = "rgba(51, 66, 87, 0.8)";
     } else {
-        document.getElementById("navigationBar").style.backgroundColor = "rgba(51, 66, 87, 0)";
+        document.getElementById("navbarNotLoggedIn").style.backgroundColor = "rgba(51, 66, 87, 0)";
+    }
+
+    if(window.pageYOffset > 5){
+        document.getElementById("navbarLoggedIn").style.backgroundColor = "rgba(51, 66, 87, 0.8)";
+    } else {
+        document.getElementById("navbarLoggedIn").style.backgroundColor = "rgba(51, 66, 87, 0)";
     }
 
     //scrollspy
