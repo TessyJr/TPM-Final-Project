@@ -15,100 +15,101 @@ var condition12 = false;
 var condition13 = false;
 
 function showTab(n) {
-    if (n == 1) {
-        document.getElementById("form2").style.display = "none";
-        document.getElementById("form3").style.display = "none";
-        document.getElementById("form1").style.display = "block";
-      } else if (n == 2) {
-        document.getElementById("form1").style.display = "none";
-        document.getElementById("form3").style.display = "none";
-        document.getElementById("form2").style.display = "block";
-      } else if (n == 3) {
-        document.getElementById("form1").style.display = "none";
-        document.getElementById("form2").style.display = "none";
-        document.getElementById("form3").style.display = "block";
-      }
+  if (n == 1) {
+    document.getElementById("form2").style.display = "none";
+    document.getElementById("form3").style.display = "none";
+    document.getElementById("form1").style.display = "block";
+  } else if (n == 2) {
+    document.getElementById("form1").style.display = "none";
+    document.getElementById("form3").style.display = "none";
+    document.getElementById("form2").style.display = "block";
+  } else if (n == 3) {
+    document.getElementById("form1").style.display = "none";
+    document.getElementById("form2").style.display = "none";
+    document.getElementById("form3").style.display = "block";
+  }
 }
 
 function next(x) {
-    page = page + x;
-    showTab(page);
+  page = page + x;
+  showTab(page);
 }
 
 function back(x) {
-    page = page + x;
-    showTab(page);
+  page = page + x;
+  showTab(page);
 }
 
 function validateGroup() {
-    var inputGroup = document.getElementById("group").value;
-    if (inputGroup != "") {
-      document.getElementById("groupInputGroup").style.borderColor = "green";
-      condition1 = true;
-    } else {
-      document.getElementById("groupInputGroup").style.borderColor = "red";
-      condition1 = false;
-    }
+  var inputGroup = document.getElementById("group").value;
+  if (inputGroup != "") {
+    document.getElementById("groupInputGroup").style.borderColor = "green";
+    condition1 = true;
+  } else {
+    document.getElementById("groupInputGroup").style.borderColor = "red";
+    condition1 = false;
+  }
 }
 
 function validatePass() {
-    var inputPass = document.getElementById("password").value;
-    var passREGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    if(inputPass.match(passREGEX)){
-      document.getElementById("validationPass").style.display = "none";
-      document.getElementById("groupInputPass").style.borderColor = "green";
-      condition2 = true;
-    } else {
-      document.getElementById("validationPass").style.display = "block";
-      document.getElementById("groupInputPass").style.borderColor = "red";
-      condition2 = false;
-    }
+  var inputPass = document.getElementById("password").value;
+  var passREGEX =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (inputPass.match(passREGEX)) {
+    document.getElementById("validationPass").style.display = "none";
+    document.getElementById("groupInputPass").style.borderColor = "green";
+    condition2 = true;
+  } else {
+    document.getElementById("validationPass").style.display = "block";
+    document.getElementById("groupInputPass").style.borderColor = "red";
+    condition2 = false;
+  }
 }
 
 function confirmPass() {
-    var inputPass = document.getElementById("password").value;
-    var inputConfirmPass = document.getElementById("confirmPassword").value;
-    if (inputConfirmPass == "") {
-      document.getElementById("groupInputConfirm").style.borderColor = "red";
-      condition3 = false;
-    } else if (inputConfirmPass == inputPass) {
-      document.getElementById("confirmationPass").style.display = "none";
-      document.getElementById("groupInputConfirm").style.borderColor = "green";
-      condition3 = true;
-    } else {
-      document.getElementById("confirmationPass").style.display = "block";
-      document.getElementById("groupInputConfirm").style.borderColor = "red";
-      condition3 = false;
-    }
+  var inputPass = document.getElementById("password").value;
+  var inputConfirmPass = document.getElementById("confirmPassword").value;
+  if (inputConfirmPass == "") {
+    document.getElementById("groupInputConfirm").style.borderColor = "red";
+    condition3 = false;
+  } else if (inputConfirmPass == inputPass) {
+    document.getElementById("confirmationPass").style.display = "none";
+    document.getElementById("groupInputConfirm").style.borderColor = "green";
+    condition3 = true;
+  } else {
+    document.getElementById("confirmationPass").style.display = "block";
+    document.getElementById("groupInputConfirm").style.borderColor = "red";
+    condition3 = false;
+  }
 }
 
 function validateStatus() {
   var status1 = document.getElementById("binusian");
   var status2 = document.getElementById("nonBinusian");
-  if(status1.checked == true || status2.checked == true) {
+  if (status1.checked == true || status2.checked == true) {
     document.getElementById("groupInputStatus").style.borderColor = "green";
     condition4 = true;
   } else {
     document.getElementById("groupInputStatus").style.borderColor = "red";
     condition4 = false;
-  } 
+  }
 }
 
 function validateName() {
   var inputName = document.getElementById("name").value;
-    if (inputName != "") {
-      document.getElementById("groupInputName").style.borderColor = "green";
-      condition5 = true;
-    } else {
-      document.getElementById("groupInputName").style.borderColor = "red";
-      condition5 = false;
-    }
+  if (inputName != "") {
+    document.getElementById("groupInputName").style.borderColor = "green";
+    condition5 = true;
+  } else {
+    document.getElementById("groupInputName").style.borderColor = "red";
+    condition5 = false;
+  }
 }
 
 function validateEmail() {
   var inputEmail = document.getElementById("email").value;
   var emailREGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if(inputEmail.match(emailREGEX)){
+  if (inputEmail.match(emailREGEX)) {
     document.getElementById("validationEmail").style.display = "none";
     document.getElementById("groupInputEmail").style.borderColor = "green";
     condition6 = true;
@@ -122,7 +123,7 @@ function validateEmail() {
 function validateWhatsapp() {
   var inputWhatsapp = document.getElementById("whatsapp").value;
   var whatsappREGEX = /^\d{9,}$/;
-  if(inputWhatsapp.match(whatsappREGEX)){
+  if (inputWhatsapp.match(whatsappREGEX)) {
     document.getElementById("validationWhatsapp").style.display = "none";
     document.getElementById("groupInputWhatsapp").style.borderColor = "green";
     condition7 = true;
@@ -135,47 +136,47 @@ function validateWhatsapp() {
 
 function validateLine() {
   var inputLine = document.getElementById("line").value;
-    if (inputLine != "") {
-      document.getElementById("groupInputLine").style.borderColor = "green";
-      condition8 = true;
-    } else {
-      document.getElementById("groupInputLine").style.borderColor = "red";
-      condition8 = false;
-    }
+  if (inputLine != "") {
+    document.getElementById("groupInputLine").style.borderColor = "green";
+    condition8 = true;
+  } else {
+    document.getElementById("groupInputLine").style.borderColor = "red";
+    condition8 = false;
+  }
 }
 
 function validateGithub() {
   var inputGithub = document.getElementById("github").value;
-    if (inputGithub != "") {
-      document.getElementById("groupInputGithub").style.borderColor = "green";
-      condition9 = true;
-    } else {
-      document.getElementById("groupInputGithub").style.borderColor = "red";
-      condition9 = false;
-    }
+  if (inputGithub != "") {
+    document.getElementById("groupInputGithub").style.borderColor = "green";
+    condition9 = true;
+  } else {
+    document.getElementById("groupInputGithub").style.borderColor = "red";
+    condition9 = false;
+  }
 }
 
-function validatePlace(){
+function validatePlace() {
   var inputPlace = document.getElementById("place").value;
-  if (inputPlace != ""){
+  if (inputPlace != "") {
     document.getElementById("groupInputPlace").style.borderColor = "green";
     condition10 = true;
-  } else{
+  } else {
     document.getElementById("groupInputPlace").style.borderColor = "red";
     condition10 = false;
   }
 }
 
-function validateDate(){
+function validateDate() {
   var inputDate = document.getElementById("date").value;
   var today = Date.now();
   var birthDate = Date.parse(inputDate);
-  var age = (today - birthDate)/(1000*60*60*24*365);
+  var age = (today - birthDate) / (1000 * 60 * 60 * 24 * 365);
 
   if (inputDate == "") {
     document.getElementById("groupInputDate").style.borderColor = "red";
     condition11 = false;
-  } else if(age>17) {
+  } else if (age > 17) {
     document.getElementById("validationDate").style.display = "none";
     document.getElementById("groupInputDate").style.borderColor = "green";
     condition11 = true;
@@ -186,23 +187,23 @@ function validateDate(){
   }
 }
 
-function validateCv(){
+function validateCv() {
   var inputCv = document.getElementById("cv").value;
-  if (inputCv != ""){
+  if (inputCv != "") {
     document.getElementById("groupInputCv").style.borderColor = "green";
     condition12 = true;
-  } else{
+  } else {
     document.getElementById("groupInputCv").style.borderColor = "red";
     condition12 = false;
   }
 }
 
-function validateId(){
+function validateId() {
   var inputId = document.getElementById("id").value;
-  if (inputId != ""){
+  if (inputId != "") {
     document.getElementById("groupInputId").style.borderColor = "green";
     condition13 = true;
-  } else{
+  } else {
     document.getElementById("groupInputId").style.borderColor = "red";
     condition13 = false;
   }
@@ -213,7 +214,12 @@ function validateForm1() {
   validatePass();
   confirmPass();
   validateStatus();
-  if (condition1 == true && condition2 == true && condition3 == true && condition4 == true) {
+  if (
+    condition1 == true &&
+    condition2 == true &&
+    condition3 == true &&
+    condition4 == true
+  ) {
     next(1);
   }
 }
@@ -224,7 +230,13 @@ function validateForm2() {
   validateWhatsapp();
   validateLine();
   validateGithub();
-  if (condition5 == true && condition6 == true && condition7 == true && condition8 == true && condition9 == true) {
+  if (
+    condition5 == true &&
+    condition6 == true &&
+    condition7 == true &&
+    condition8 == true &&
+    condition9 == true
+  ) {
     next(1);
   }
 }
@@ -243,7 +255,57 @@ function validateAllForm() {
   validateDate;
   validateCv();
   validateId();
-  if (condition1 == true && condition2 == true && condition3 == true && condition4 == true && condition5 == true && condition6 == true && condition7 == true && condition8 == true && condition9 == true && condition10 == true && condition11 == true && condition12 == true && condition13 == true) {
+  if (
+    condition1 == true &&
+    condition2 == true &&
+    condition3 == true &&
+    condition4 == true &&
+    condition5 == true &&
+    condition6 == true &&
+    condition7 == true &&
+    condition8 == true &&
+    condition9 == true &&
+    condition10 == true &&
+    condition11 == true &&
+    condition12 == true &&
+    condition13 == true
+  ) {
     document.inputForm.submit();
   }
 }
+
+// Show Password
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#password");
+
+togglePassword.addEventListener("click", function () {
+  // toggle the type attribute
+  const type1 =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type1);
+
+  // toggle the icon
+  const icon1 =
+    togglePassword.getAttribute("class") === "far fa-eye-slash"
+      ? "far fa-eye"
+      : "far fa-eye-slash";
+  togglePassword.setAttribute("class", icon1);
+});
+
+// Show Confirm Password
+const toggleConfirmPassword = document.querySelector("#toggleConfirmPassword");
+const confirmPassword = document.querySelector("#confirmPassword");
+
+toggleConfirmPassword.addEventListener("click", function () {
+  // toggle the type attribute
+  const type2 =
+    confirmPassword.getAttribute("type") === "password" ? "text" : "password";
+  confirmPassword.setAttribute("type", type2);
+
+  // toggle the icon
+  const icon2 =
+    toggleConfirmPassword.getAttribute("class") === "far fa-eye-slash"
+      ? "far fa-eye"
+      : "far fa-eye-slash";
+  toggleConfirmPassword.setAttribute("class", icon2);
+});

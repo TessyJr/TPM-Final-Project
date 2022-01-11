@@ -42,8 +42,8 @@ body {
 
 /* NavBar */
 .navbar {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   background-color: rgba(51, 66, 87, 0);
   animation: appear 1s;
   transition: background-color 0.3s;
@@ -51,6 +51,7 @@ body {
 
 .navbar .container .collapse ul li {
   margin: 0 10px;
+  margin-left: 50px;
 }
 
 .navbar .container a span {
@@ -58,18 +59,18 @@ body {
 }
 
 .navbar a .login {
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 50px;
   background: none;
   border: 2px solid white;
   color: white;
   transition: 0.2s;
   font-weight: 500;
-  padding: 5px 20px;
+  padding: 8px 20px;
 }
 
 .navbar .login i {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .navbar a .login:hover {
@@ -285,6 +286,50 @@ body {
     background-position: center; */
 }
 
+/* Previously on Hackthon 5.0 */
+.aboutUs .previous {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs .previous h1 {
+  font-size: 72px;
+  color: #43538c;
+  font-weight: bolder;
+}
+
+.aboutUs .previous p {
+  color: #7483b9;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.aboutUs .previous .carousel {
+  margin: 50px 0 100px 0;
+  width: 950px;
+}
+
+.aboutUs .previous .carousel button.carousel-control-prev {
+  transform: translateX(-50px);
+}
+
+.aboutUs .previous .carousel button.carousel-control-next {
+  transform: translateX(50px);
+}
+
+.aboutUs .previous .carousel .carousel-indicators button {
+  margin-top: 100px;
+  transform: translateY(60px);
+  height: 5px;
+  width: 50px;
+  margin: 0 5px;
+}
+
 /* Join us */
 .aboutUs .joinUs {
   height: 100vh;
@@ -425,34 +470,6 @@ body {
 
 #item-3:checked ~ .player #test {
   transform: translateY(-80px);
-}
-
-/* Previously on Hackthon 5.0 */
-.aboutUs .previous {
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.aboutUs .previous h1 {
-  font-size: 72px;
-  color: #43538c;
-  font-weight: bolder;
-}
-
-.aboutUs .previous p {
-  color: #7483b9;
-  font-size: 24px;
-  font-weight: 500;
-  margin-top: 20px;
-}
-
-.aboutUs .previous .carousel {
-  margin: 50px 0 100px 0;
-  width: 950px;
 }
 
 /* Champoin Prizes */
