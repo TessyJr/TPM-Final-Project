@@ -173,7 +173,7 @@ function validateDate() {
   var birthDate = Date.parse(inputDate);
   var age = (today - birthDate) / (1000 * 60 * 60 * 24 * 365);
 
-  if (inputDate == "") {
+  if (valueDate == null || valueDate == "" || age == null || age == "") {
     document.getElementById("groupInputDate").style.borderColor = "red";
     condition11 = false;
   } else if (age > 17) {
@@ -271,6 +271,7 @@ function validateAllForm() {
     condition13 == true
   ) {
     document.inputForm.submit();
+    window.location.href = "landingPage.html";
   }
 }
 
