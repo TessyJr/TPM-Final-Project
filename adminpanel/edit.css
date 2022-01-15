@@ -12,11 +12,9 @@ body {
 }
 
 /* NavBar-start */
-
 .navbar {
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 5px;
   background-color: rgba(51, 66, 87, 0);
   animation: appear 1s;
   transition: background-color 0.3s;
@@ -147,18 +145,18 @@ body {
   background-color: #ffff;
 }
 
-.nav-link {
+.nav-link2 {
   margin: 10px 20px;
   font-size: large;
   color: #334257;
   font-weight: bolder;
 }
 
-.nav-link:hover {
+.nav-link2:hover {
   color: #548ca8;
 }
 
-.nav-link:focus {
+.nav-link2:focus {
   color: #548ca8;
 }
 .buttonsavecancel {

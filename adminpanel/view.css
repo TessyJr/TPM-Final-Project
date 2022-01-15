@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,7 +60,6 @@ body {
 
 /* nav-end */
 
-
 .title > h2 {
   font-weight: bolder;
   letter-spacing: 5px;
@@ -69,12 +69,12 @@ body {
 .card {
   width: 70rem;
   background-color: #ffffff;
-  color: #548CA8;
+  color: #548ca8;
   padding: 50px;
   border-radius: 45px;
   font-size: 20px;
   font-weight: bolder;
-  border: 2px solid #C4DAE4;
+  border: 2px solid #c4dae4;
 }
 
 .form-control {
@@ -107,8 +107,8 @@ body {
   box-shadow: none;
 }
 
-.modal-content{
-  background-color: #F4F7FF !important;
+.modal-content {
+  background-color: #f4f7ff !important;
 }
 
 .modal-footer {
@@ -160,21 +160,20 @@ inputfile + label {
   background-color: #ffff;
 }
 
-.nav-link {
+.nav-link2 {
   margin: 10px 20px;
   font-size: large;
   color: #334257;
   font-weight: bolder;
 }
 
-.nav-link:hover{
-  color: #548CA8;
-  }
+.nav-link2:hover {
+  color: #548ca8;
+}
 
-  .nav-link:focus{
-    color: #548CA8;
-  }
-  .buttonsavecancel{
-    padding-right: 3.25rem;
-  }
-  
+.nav-link2:focus {
+  color: #548ca8;
+}
+.buttonsavecancel {
+  padding-right: 3.25rem;
+}
