@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #7382b8, white);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(51, 66, 87, 0);
+  transition: background-color 0.3s;
+}
+.navbar .container {
+  padding: 0;
+}
+.navbar .container .collapse ul li {
+  margin: 0 10px;
+  margin-left: 50px;
+}
+
+.navbar .container a span {
+  font-size: 50px;
+}
+
+.navbar a .logout {
+  font-size: 20px;
+  border-radius: 50px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+  transition: 0.2s;
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+.navbar .logout i {
+  font-size: 20px;
+}
+
+.navbar a .logout:hover {
+  background: white;
+  border: 2px solid white;
+  color: #334257;
+  transition: 0.2s;
+}
+
+.navbar a .logout:active {
+  transform: translateY(5px);
+  transition: 0.2s ease-in-out;
+}
+
+/* timeline */
+.timeline {
+  min-height: 100vh;
+  color: white;
+}
+
+.timeline .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.timeline .container .timelineItem {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.timeline .container .timelineItem .timelineImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.timeline .container .timelineItem .timelineDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 2;
+}
+
+.timeline .container .timelineItem .timelineDesc h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.timeline .container .timelineItem .timelineDesc p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.timeline .container .timelineItem .timelineLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.timeline .container .timelineItem .timelineLink a button {
+  border: 2px solid #7382b8;
+  background-color: #7382b8;
+  padding: 10px 40px;
+  border-radius: 15px;
+  color: white;
+  font-size: 24px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.timeline .container .timelineItem .timelineLink a button:hover {
+  background: none;
+  border: 2px solid #7382b8;
+  color: #7382b8;
+  font-size: 24px;
+  transition: 0.3s;
+}

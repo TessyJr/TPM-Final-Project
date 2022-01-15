@@ -281,7 +281,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url("assets/laptop.png");
+  /* background-image: url("asset/laptop.png");
     background-repeat: no-repeat;
     background-position: center; */
 }
@@ -398,15 +398,15 @@ body {
 }
 
 .aboutUs .joinUs .container .cards .card #cardImage1 {
-  background-image: url(assets/network.png);
+  background-image: url(asset/network.png);
 }
 
 .aboutUs .joinUs .container .cards .card #cardImage2 {
-  background-image: url(assets/mentor.png);
+  background-image: url(asset/mentor.png);
 }
 
 .aboutUs .joinUs .container .cards .card #cardImage3 {
-  background-image: url(assets/cv.png);
+  background-image: url(asset/cv.png);
 }
 
 .aboutUs .joinUs .container .cards .card .cardText {
@@ -593,7 +593,7 @@ body {
   display: flex;
   justify-content: space-;
   width: 65vw;
-  background-image: url("assets/path.png");
+  background-image: url("asset/path.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1025,7 +1025,7 @@ div#Jurycarousel {
 
 .faq .faqContainer .faqImg {
   width: 40%;
-  background: url("assets/faq.png");
+  background: url("asset/faq.png");
   height: 500px;
   background-size: contain;
   background-position: center;
